@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Temelleri Öğrenme Günlüğü</title>
+  <!-- HTML İçinde CSS (Internal CSS) -->
+  <style>
+    body { font-family: sans-serif; margin: 24px; line-height: 1.6; }
+    .vurgu { color: #d9534f; font-weight: bold; }
+    table, th, td { border: 1px solid #ccc; border-collapse: collapse; padding: 8px; }
+  </style>
+</head>
+<body>
+
+  <!-- Semantik Başlık Grubu -->
+  <header>
+    <h1>Web Geliştirme Yolculuğu</h1>
+    <!-- HTML Yorum Satırı: Bu kısım ekranda görünmez -->
+    <p>Bugün <span class="vurgu">HTML temellerini</span> kodlayarak öğreniyorum.</p>
+  </header>
+
+  <main>
+    <!-- Listeler -->
+    <section>
+      <h2>Öğrenilecek Adımlar</h2>
+      <ol>
+        <li>HTML İskeleti</li>
+        <li>CSS ile Şekillendirme</li>
+        <li>JavaScript ile Etkileşim</li>
+      </ol>
+    </section>
+
+    <!-- Tablo -->
+    <section>
+      <h2>Haftalık Plan</h2>
+      <table>
+        <tr>
+          <th>Konu</th>
+          <th>Hedef</th>
+        </tr>
+        <tr>
+          <td>HTML & Formlar</td>
+          <td>Temel Giriş</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Form Elementleri -->
+    <section>
+      <h2>Geri Bildirim Formu</h2>
+      <form action="#" method="get">
+        <label for="kullanici-adi">Kullanıcı Adı:</label><br>
+        <input type="text" id="kullanici-adi" name="username" placeholder="Adınızı girin"><br><br>
+
+        <label for="mesaj">Notun:</label><br>
+        <textarea id="mesaj" name="mesaj" rows="3"></textarea><br><br>
+
+        <button type="submit">Gönder</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 - GitHub'a yüklenecek ilk proje</p>
+  </footer>
+
+</body>
+</html>
