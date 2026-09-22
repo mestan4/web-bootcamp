@@ -2,66 +2,92 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>HTML Temelleri Öğrenme Günlüğü</title>
-  <!-- HTML İçinde CSS (Internal CSS) -->
-  <style>
-    body { font-family: sans-serif; margin: 24px; line-height: 1.6; }
-    .vurgu { color: #d9534f; font-weight: bold; }
-    table, th, td { border: 1px solid #ccc; border-collapse: collapse; padding: 8px; }
-  </style>
+  <title>Profil Kartım - HTML Temelleri</title>
 </head>
 <body>
 
-  <!-- Semantik Başlık Grubu -->
+  <!-- Semantik Başlık -->
   <header>
-    <h1>Web Geliştirme Yolculuğu</h1>
-    <!-- HTML Yorum Satırı: Bu kısım ekranda görünmez -->
-    <p>Bugün <span class="vurgu">HTML temellerini</span> kodlayarak öğreniyorum.</p>
+    <h1>Web Geliştirici Profili</h1>
+    <p>Durum: <span style="color: green; font-weight: bold;">Öğreniyor</span></p>
   </header>
 
   <main>
-    <!-- Listeler -->
+    
+    <!-- 1. Bölüm: Bilgiler ve Listeler -->
     <section>
-      <h2>Öğrenilecek Adımlar</h2>
-      <ol>
-        <li>HTML İskeleti</li>
-        <li>CSS ile Şekillendirme</li>
-        <li>JavaScript ile Etkileşim</li>
-      </ol>
+      <h2>Hakkımda</h2>
+      <p>Sıfırdan web geliştirme öğreniyorum; HTML, CSS ve JavaScript temellerini pratik yaparak keşfediyorum.</p>
+      
+      <h3>Öğrenilecek Teknolojiler</h3>
+      <ul>
+        <li>HTML5 (İskelet)</li>
+        <li>CSS3 (Stil & Düzen)</li>
+        <li>JavaScript (Dinamizm & Mantık)</li>
+        <li>React JS (Modern Kütüphane)</li>
+      </ul>
     </section>
 
-    <!-- Tablo -->
+    <!-- 2. Bölüm: 5 Günlük Ders Tablosu -->
     <section>
-      <h2>Haftalık Plan</h2>
-      <table>
-        <tr>
-          <th>Konu</th>
-          <th>Hedef</th>
-        </tr>
-        <tr>
-          <td>HTML & Formlar</td>
-          <td>Temel Giriş</td>
-        </tr>
+      <h2>Ders Programı</h2>
+      <table border="1" cellpadding="6">
+        <thead>
+          <tr>
+            <th>Gün</th>
+            <th>Konu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1. Gün</td>
+            <td>HTML</td>
+          </tr>
+          <tr>
+            <td>2. Gün</td>
+            <td>CSS</td>
+          </tr>
+          <tr>
+            <td>3. Gün</td>
+            <td>JavaScript</td>
+          </tr>
+          <tr>
+            <td>4. Gün</td>
+            <td>JavaScript</td>
+          </tr>
+          <tr>
+            <td>5. Gün</td>
+            <td>React JS (Uygulamalı)</td>
+          </tr>
+        </tbody>
       </table>
     </section>
 
-    <!-- Form Elementleri -->
+    <!-- 3. Bölüm: Form Elementleri -->
     <section>
-      <h2>Geri Bildirim Formu</h2>
-      <form action="#" method="get">
-        <label for="kullanici-adi">Kullanıcı Adı:</label><br>
-        <input type="text" id="kullanici-adi" name="username" placeholder="Adınızı girin"><br><br>
+      <h2>Bana Ulaşın</h2>
+      <form action="#">
+        
+        <label for="ad-soyad">Adınız Soyadınız:</label><br>
+        <input type="text" id="ad-soyad" name="adSoyad" placeholder="Örn: Adınız" required><br><br>
 
-        <label for="mesaj">Notun:</label><br>
-        <textarea id="mesaj" name="mesaj" rows="3"></textarea><br><br>
+        <label for="seviye">Yazılım Seviyeniz:</label><br>
+        <select id="seviye" name="seviye">
+          <option value="sifir">Sıfırdan Başlayan</option>
+          <option value="orta">Orta Seviye</option>
+        </select><br><br>
 
-        <button type="submit">Gönder</button>
+        <label for="mesaj">Mesajınız:</label><br>
+        <textarea id="mesaj" name="mesaj" rows="4" cols="30" placeholder="Bir şeyler yazın..."></textarea><br><br>
+
+        <button type="submit">Formu Gönder</button>
       </form>
     </section>
+
   </main>
 
   <footer>
-    <p>&copy; 2026 - GitHub'a yüklenecek ilk proje</p>
+    <p><small>&copy; 2026 - Tüm hakları saklıdır.</small></p>
   </footer>
 
 </body>
