@@ -1,0 +1,112 @@
+/* 1. RESET & BOX MODEL: Kutu hesaplamasını standart yapıyoruz */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Padding ve border kutuyu şişirmesin */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. FLEXBOX İLE TAM ORTALAMA: Sayfa gövdesi tüm ekranı kaplasın */
+body.auth-page {
+  background-color: #f0f2f5; /* Yumuşak arka plan rengi */
+  min-height: 100vh;         /* Ekranın tüm yüksekliğini kapla */
+  display: flex;             /* Flexbox devreye girdi */
+  justify-content: center;   /* Yatayda tam ortala */
+  align-items: center;       /* Dikeyde tam ortala */
+}
+
+/* 3. KART DÜZENİ: Box model (Padding, Border, Shadow) */
+.auth-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  padding: 32px;             /* İç boşluk */
+  border-radius: 12px;       /* Köşe yuvarlama */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Hafif gölge */
+}
+
+.auth-header h2 {
+  color: #1e293b;
+  margin-bottom: 8px;        /* Dış boşluk: altındaki yazıdan uzaklaş */
+}
+
+.auth-header p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* 4. FORM GRUPLARI */
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;    /* Label ve input'u alt alta diz */
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+/* 5. ATTRIBUTE SELECTOR: Sadece text/email/password kutularını seç */
+input[type="email"],
+input[type="password"] {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 6. PSEUDO-CLASS (:focus): Kutuya tıklanınca mavi çerçeve yansın */
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* 7. BUTON & HOVER & TRANSFORM */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Farenin üzerine gelme durumu (:hover) */
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px); /* Buton hafif yukarı kalkar */
+}
+
+/* Tıklanma anı (:active) */
+.btn-primary:active {
+  transform: translateY(0);    /* Basılınca eski yerine iner */
+}
+
+.auth-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.auth-footer a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
