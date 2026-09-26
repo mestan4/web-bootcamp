@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dersler | Çalışma Portalı</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Üst Gezinme Menüsü (Navbar) -->
+  <header class="navbar">
+    <div class="logo">ÇalışmaPortalı</div>
+    <nav class="nav-links">
+      <a href="lessons.html" class="active">Dersler</a>
+      <a href="add-study.html">Çalışma Ekle</a>
+      <a href="reports.html">Raporlar</a>
+      <a href="login.html" class="logout-link">Çıkış</a>
+    </nav>
+  </header>
+
+  <!-- Ana İçerik Alanı -->
+  <main class="container">
+    <div class="page-title">
+      <h1>Haftalık Müfredat & Dersler</h1>
+      <p>Takip ettiğin eğitim içeriği ve günlük çalışma modülleri.</p>
+    </div>
+
+    <!-- CSS Grid ile Kartların Dizildiği Alan -->
+    <section class="lesson-grid">
+      
+      <!-- 1. Kart -->
+      <article class="lesson-card">
+        <span class="badge badge-html">1. Gün</span>
+        <h3>HTML5 Temelleri</h3>
+        <p>Semantik etiketler, form elemanları, DOM hiyerarşisi ve sayfa iskeletinin oluşturulması.</p>
+        <div class="card-footer">
+          <span class="status completed">Tamamlandı</span>
+        </div>
+      </article>
+
+      <!-- 2. Kart -->
+      <article class="lesson-card">
+        <span class="badge badge-css">2. Gün</span>
+        <h3>CSS3 & Sayfa Düzeni</h3>
+        <p>Box model, Flexbox ortalamaları, CSS Grid sütunları ve modern arayüz stilleri.</p>
+        <div class="card-footer">
+          <span class="status in-progress">Devam Ediyor</span>
+        </div>
+      </article>
+
+      <!-- 3. Kart -->
+      <article class="lesson-card">
+        <span class="badge badge-js">3. Gün</span>
+        <h3>Modern JavaScript Giriş</h3>
+        <p>Değişkenler, fonksiyonlar, DOM elementlerini seçme ve kullanıcı olaylarını dinleme.</p>
+        <div class="card-footer">
+          <span class="status pending">Sırada</span>
+        </div>
+      </article>
+
+      <!-- 4. Kart -->
+      <article class="lesson-card">
+        <span class="badge badge-js">4. Gün</span>
+        <h3>İleri JavaScript & API</h3>
+        <p>Dizilerle işlemler (map, filter), Asenkron yapı, Fetch API ile backend veri çekme.</p>
+        <div class="card-footer">
+          <span class="status pending">Sırada</span>
+        </div>
+      </article>
+
+      <!-- 5. Kart -->
+      <article class="lesson-card">
+        <span class="badge badge-react">5. Gün</span>
+        <h3>React JS Uygulamalı</h3>
+        <p>Bileşen (Component) mimarisi, Props ve State yönetimi ile modern tek sayfa uygulaması.</p>
+        <div class="card-footer">
+          <span class="status pending">Sırada</span>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+</body>
+</html>

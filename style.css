@@ -51,6 +51,7 @@ body.auth-page {
 }
 
 /* 5. ATTRIBUTE SELECTOR: Sadece text/email/password kutularını seç */
+input[type="text"],
 input[type="email"],
 input[type="password"] {
   padding: 12px;
@@ -62,6 +63,7 @@ input[type="password"] {
 }
 
 /* 6. PSEUDO-CLASS (:focus): Kutuya tıklanınca mavi çerçeve yansın */
+input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
   border-color: #2563eb;
@@ -110,3 +112,129 @@ input[type="password"]:focus {
 .auth-footer a:hover {
   text-decoration: underline;
 }
+/* --- GENEL SAYFA DÜZENİ --- */
+body {
+  background-color: #f8fafc;
+  color: #334155;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+.page-title {
+  margin-bottom: 28px;
+}
+
+.page-title h1 {
+  font-size: 26px;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.page-title p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* --- NAVBAR (FLEXBOX) --- */
+.navbar {
+  background-color: #ffffff;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #475569;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 20px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #2563eb;
+}
+
+.nav-links a.logout-link {
+  color: #ef4444;
+}
+
+/* --- CSS GRID: DERS KARTLARI ALANI --- */
+.lesson-grid {
+  display: grid;
+  /* Ekran genişliğine göre otomatik 280px sütunlar oluştur ve boşluğu doldur */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px; /* Kartların arasındaki boşluk */
+}
+
+/* KART TASARIMI (TRANSFORM & HOVER) */
+.lesson-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lesson-card:hover {
+  transform: translateY(-4px); /* Üzerine gelince yukarı kaysın */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.lesson-card h3 {
+  font-size: 18px;
+  color: #1e293b;
+  margin: 12px 0 8px 0;
+}
+
+.lesson-card p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* ROZETLER (BADGES) */
+.badge {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-html { background-color: #ffedd5; color: #c2410c; }
+.badge-css { background-color: #e0f2fe; color: #0369a1; }
+.badge-js { background-color: #fef9c3; color: #a16207; }
+.badge-react { background-color: #e0e7ff; color: #4338ca; }
+
+/* KART DURUMLARI (STATUS) */
+.card-footer {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status.completed { color: #16a34a; }
+.status.in-progress { color: #2563eb; }
+.status.pending { color: #94a3b8; }
