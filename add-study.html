@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Çalışma Ekle | Çalışma Portalı</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ortak Navbar -->
+  <header class="navbar">
+    <div class="logo">ÇalışmaPortalı</div>
+    <nav class="nav-links">
+      <a href="lessons.html">Dersler</a>
+      <a href="add-study.html" class="active">Çalışma Ekle</a>
+      <a href="reports.html">Raporlar</a>
+      <a href="login.html" class="logout-link">Çıkış</a>
+    </nav>
+  </header>
+
+  <!-- Form İçerik Alanı -->
+  <main class="container">
+    <div class="form-card">
+      <div class="page-title">
+        <h1>Yeni Çalışma Kaydı</h1>
+        <p>Günün çalışma detaylarını ve sürelerini sisteme ekleyin.</p>
+      </div>
+
+      <form action="reports.html" method="get">
+        
+        <div class="form-row">
+          <div class="form-group flex-1">
+            <label for="lesson-select">Ders / Modül</label>
+            <select id="lesson-select" name="lesson" required>
+              <option value="" disabled selected>Ders seçiniz...</option>
+              <option value="html">1. Gün: HTML Temelleri</option>
+              <option value="css">2. Gün: CSS & Grid / Flexbox</option>
+              <option value="js1">3. Gün: JavaScript Giriş</option>
+              <option value="js2">4. Gün: Modern JavaScript & API</option>
+              <option value="react">5. Gün: React JS</option>
+            </select>
+          </div>
+
+          <div class="form-group flex-1">
+            <label for="study-date">Çalışma Tarihi</label>
+            <input type="date" id="study-date" name="studyDate" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group flex-1">
+            <label for="duration">Çalışma Süresi (Dakika)</label>
+            <input type="number" id="duration" name="duration" min="15" step="15" placeholder="Örn: 90" required>
+          </div>
+
+          <div class="form-group flex-1">
+            <label for="study-topic">İşlenen Alt Konu</label>
+            <input type="text" id="study-topic" name="topic" placeholder="Örn: CSS Grid yapısı" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Çalışma Notları & Karşılaşılan Hatalar</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Bu derste neleri öğrendiniz, nerelerde zorlandınız?"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <a href="lessons.html" class="btn-secondary">İptal</a>
+          <button type="submit" class="btn-primary-inline">Kaydı Tamamla</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>

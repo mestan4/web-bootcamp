@@ -238,3 +238,173 @@ body {
 .status.completed { color: #16a34a; }
 .status.in-progress { color: #2563eb; }
 .status.pending { color: #94a3b8; }
+
+/* --- FORM KARTI VE ELEMANLARI (ADD-STUDY) --- */
+.form-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 720px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* Yan yana duran form alanları için Flexbox */
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.flex-1 {
+  flex: 1; /* Eşit genişlikte paylaştır */
+}
+
+/* Select, Date ve Number inputlarına stil verilmesi */
+select,
+input[type="date"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  background-color: #ffffff;
+  color: #334155;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+select:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+textarea {
+  resize: vertical; /* Sadece dikeyde boyutlandırılabilsin */
+}
+
+/* Buton grubu yerleşimi */
+.form-actions {
+  display: flex;
+  justify-content: flex-end; /* Butonları sağa yasla */
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn-secondary {
+  text-decoration: none;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.btn-primary-inline {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary-inline:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* --- İSTATİSTİK KARTLARI (STATS) --- */
+.stats-grid {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 24px;
+  color: #0f172a;
+  margin-top: 8px;
+}
+
+/* --- MODERN TABLO TASARIMI --- */
+.table-container {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse; /* Çift çizgileri tek çizgiye indir */
+  text-align: left;
+}
+
+.report-table th {
+  background-color: #f8fafc;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  text-transform: uppercase;
+}
+
+.report-table td {
+  padding: 16px 20px;
+  font-size: 14px;
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* Satırın üzerine gelince hafif grileşme (Hover efekti) */
+.report-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Tablo içindeki durum rozetleri */
+.table-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-success { background-color: #dcfce7; color: #15803d; }
+.badge-process { background-color: #dbeafe; color: #1d4ed8; }
+.badge-waiting { background-color: #f1f5f9; color: #64748b; }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Raporlar | Çalışma Portalı</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ortak Navbar -->
+  <header class="navbar">
+    <div class="logo">ÇalışmaPortalı</div>
+    <nav class="nav-links">
+      <a href="lessons.html">Dersler</a>
+      <a href="add-study.html">Çalışma Ekle</a>
+      <a href="reports.html" class="active">Raporlar</a>
+      <a href="login.html" class="logout-link">Çıkış</a>
+    </nav>
+  </header>
+
+  <!-- Ana İçerik -->
+  <main class="container">
+    <div class="page-title">
+      <h1>Çalışma ve İlerleme Raporu</h1>
+      <p>Haftalık çalışma sürelerinizin ve tamamlanan konuların dökümü.</p>
+    </div>
+
+    <!-- Özet İstatistik Kartları (Flexbox) -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-label">Toplam Çalışma</span>
+        <h3 class="stat-value">5.5 Saat</h3>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Tamamlanan Konu</span>
+        <h3 class="stat-value">2 / 5</h3>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Genel İlerleme</span>
+        <h3 class="stat-value">%40</h3>
+      </div>
+    </section>
+
+    <!-- Modern Tablo Alanı -->
+    <section class="table-container">
+      <table class="report-table">
+        <thead>
+          <tr>
+            <th>Tarih</th>
+            <th>Ders / Modül</th>
+            <th>İşlenen Konu</th>
+            <th>Süre</th>
+            <th>Durum</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>28.09.2026</td>
+            <td>1. Gün: HTML Temelleri</td>
+            <td>Semantik Yapı & Formlar</td>
+            <td>120 dk</td>
+            <td><span class="table-badge badge-success">Tamamlandı</span></td>
+          </tr>
+          <tr>
+            <td>29.09.2026</td>
+            <td>2. Gün: CSS & Grid</td>
+            <td>Box Model, Flex & Grid</td>
+            <td>150 dk</td>
+            <td><span class="table-badge badge-process">Devam Ediyor</span></td>
+          </tr>
+          <tr>
+            <td>30.09.2026</td>
+            <td>3. Gün: JavaScript</td>
+            <td>DOM & Olay Dinleyicileri</td>
+            <td>-</td>
+            <td><span class="table-badge badge-waiting">Planlandı</span></td>
+          </tr>
+          <tr>
+            <td>01.10.2026</td>
+            <td>4. Gün: Modern JS</td>
+            <td>Async/Await & Fetch API</td>
+            <td>-</td>
+            <td><span class="table-badge badge-waiting">Planlandı</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+</body>
+</html>
