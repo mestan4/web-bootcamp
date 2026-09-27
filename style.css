@@ -260,23 +260,40 @@ body {
   flex: 1; /* Eşit genişlikte paylaştır */
 }
 
-/* Select, Date ve Number inputlarına stil verilmesi */
+/* Select, Datalist, Date, Number, Text ve Textarea elemanlarının boyut eşitliği */
 select,
+input[list],
+input[type="text"],
+input[type="email"],
+input[type="password"],
 input[type="date"],
 input[type="number"],
 textarea {
   width: 100%;
-  padding: 11px 12px;
+  height: 44px; /* Tüm tek satırlık kutuların yüksekliğini eşitliyoruz */
+  padding: 10px 12px;
   border: 1px solid #cbd5e1;
   border-radius: 6px;
   font-size: 14px;
   outline: none;
   background-color: #ffffff;
   color: #334155;
+  box-sizing: border-box; /* Padding yüksekliği bozmasın */
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Textarea çok satırlı olduğu için sabit 44px yüksekliği eziyoruz */
+textarea {
+  height: auto;
+  min-height: 90px;
+  resize: vertical;
+}
+
 select:focus,
+input[list]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
 input[type="date"]:focus,
 input[type="number"]:focus,
 textarea:focus {

@@ -25,19 +25,19 @@
       <p>Haftalık çalışma sürelerinizin ve tamamlanan konuların dökümü.</p>
     </div>
 
-    <!-- Özet İstatistik Kartları (Flexbox) -->
+    <!-- Özet İstatistik Kartları (Dinamik Hale Getirildi) -->
     <section class="stats-grid">
       <div class="stat-card">
         <span class="stat-label">Toplam Çalışma</span>
-        <h3 class="stat-value">5.5 Saat</h3>
+        <h3 class="stat-value" id="stat-total-hours">0 Saat</h3>
       </div>
       <div class="stat-card">
         <span class="stat-label">Tamamlanan Konu</span>
-        <h3 class="stat-value">2 / 5</h3>
+        <h3 class="stat-value" id="stat-completed-count">0 / 0</h3>
       </div>
       <div class="stat-card">
         <span class="stat-label">Genel İlerleme</span>
-        <h3 class="stat-value">%40</h3>
+        <h3 class="stat-value" id="stat-progress-percent">%0</h3>
       </div>
     </section>
 
@@ -86,6 +86,10 @@
       </table>
     </section>
   </main>
+
+<script src="script.js"></script>
+</body>
+</html>
 
 </body>
 </html>

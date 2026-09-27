@@ -28,17 +28,18 @@
 
       <form action="reports.html" method="get">
         
+        <!-- 1. Satır: Ders Adı ve Tarih -->
         <div class="form-row">
           <div class="form-group flex-1">
-            <label for="lesson-select">Ders / Modül</label>
-            <select id="lesson-select" name="lesson" required>
-              <option value="" disabled selected>Ders seçiniz...</option>
-              <option value="html">1. Gün: HTML Temelleri</option>
-              <option value="css">2. Gün: CSS & Grid / Flexbox</option>
-              <option value="js1">3. Gün: JavaScript Giriş</option>
-              <option value="js2">4. Gün: Modern JavaScript & API</option>
-              <option value="react">5. Gün: React JS</option>
-            </select>
+            <label for="lesson-input">Ders / Modül</label>
+            <input list="lesson-options" id="lesson-input" name="lesson" placeholder="Ders seçin veya yazın..." required>
+            <datalist id="lesson-options">
+              <option value="1. Gün: HTML Temelleri">
+              <option value="2. Gün: CSS & Grid / Flexbox">
+              <option value="3. Gün: JavaScript Giriş">
+              <option value="4. Gün: Modern JavaScript & API">
+              <option value="5. Gün: React JS">
+            </datalist>
           </div>
 
           <div class="form-group flex-1">
@@ -47,31 +48,50 @@
           </div>
         </div>
 
+        <!-- 2. Satır: Süre, Alt Konu ve Durum -->
         <div class="form-row">
           <div class="form-group flex-1">
             <label for="duration">Çalışma Süresi (Dakika)</label>
-            <input type="number" id="duration" name="duration" min="15" step="15" placeholder="Örn: 90" required>
+            <input type="number" id="duration" name="duration" min="0" step="1" placeholder="Örn: 45" required>
           </div>
 
           <div class="form-group flex-1">
             <label for="study-topic">İşlenen Alt Konu</label>
             <input type="text" id="study-topic" name="topic" placeholder="Örn: CSS Grid yapısı" required>
           </div>
+
+          <div class="form-group flex-1">
+            <label for="status-select">Çalışma Durumu</label>
+            <select id="status-select" name="status">
+              <option value="Tamamlandı">Tamamlandı</option>
+              <option value="Devam Ediyor">Devam Ediyor</option>
+              <option value="Planlandı">Planlandı</option>
+            </select>
+          </div>
         </div>
 
+        <!-- 3. Satır: Notlar -->
         <div class="form-group">
           <label for="notes">Çalışma Notları & Karşılaşılan Hatalar</label>
-          <textarea id="notes" name="notes" rows="4" placeholder="Bu derste neleri öğrendiniz, nerelerde zorlandınız?"></textarea>
+          <textarea id="notes" name="notes" rows="3" placeholder="Bu derste neleri öğrendiniz, nerelerde zorlandınız?"></textarea>
         </div>
 
+        <!-- Butonlar -->
         <div class="form-actions">
           <a href="lessons.html" class="btn-secondary">İptal</a>
           <button type="submit" class="btn-primary-inline">Kaydı Tamamla</button>
         </div>
 
       </form>
+
+      </form>
     </div>
   </main>
+
+  <!-- Sayfanın en altına JS dosyamızı bağlıyoruz -->
+  <script src="script.js"></script>
+</body>
+</html>
 
 </body>
 </html>
