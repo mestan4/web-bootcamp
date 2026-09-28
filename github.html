@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub Arama | Çalışma Portalı</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ortak Navbar -->
+  <header class="navbar">
+    <div class="logo">ÇalışmaPortalı</div>
+    <nav class="nav-links">
+      <a href="lessons.html">Dersler</a>
+      <a href="add-study.html">Çalışma Ekle</a>
+      <a href="reports.html">Raporlar</a>
+      <a href="github.html" class="active">GitHub Proje</a>
+      <a href="login.html" class="logout-link">Çıkış</a>
+    </nav>
+  </header>
+
+  <!-- GitHub Arama İçeriği -->
+  <main class="container">
+    <div class="page-title">
+      <h1>GitHub Profil & Repo Gezgini</h1>
+      <p>Modern JavaScript (Fetch, Async/Await) ile GitHub API'sinden canlı veri çekme.</p>
+    </div>
+
+    <!-- Arama Çubuğu -->
+    <section class="github-search-box">
+      <input type="text" id="gh-username" placeholder="GitHub kullanıcı adı girin (örn: mestan4)">
+      <button id="gh-search-btn" class="btn-primary-inline">Profil Ara</button>
+    </section>
+
+    <!-- Yükleniyor / Durum Mesajı -->
+    <div id="gh-status" class="status-msg"></div>
+
+    <!-- Canlı Veri Kartı (Başta Gizli) -->
+    <section id="gh-profile-card" class="gh-card" style="display: none;">
+      <div class="gh-header">
+        <img id="gh-avatar" src="" alt="Avatar">
+        <div class="gh-info">
+          <h2 id="gh-name"></h2>
+          <a id="gh-link" href="" target="_blank"></a>
+          <p id="gh-bio"></p>
+        </div>
+      </div>
+
+      <div class="gh-stats">
+        <div class="stat-pill">Repo Sayısı: <span id="gh-repos-count">0</span></div>
+        <div class="stat-pill">Takipçi: <span id="gh-followers">0</span></div>
+      </div>
+
+      <h3 style="margin-top: 24px; margin-bottom: 12px;">Son Repolar</h3>
+      <ul id="gh-repo-list" class="gh-repo-list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

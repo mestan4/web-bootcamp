@@ -425,3 +425,108 @@ textarea {
 .badge-success { background-color: #dcfce7; color: #15803d; }
 .badge-process { background-color: #dbeafe; color: #1d4ed8; }
 .badge-waiting { background-color: #f1f5f9; color: #64748b; }
+
+/* --- GITHUB SAYFASI TASARIMI --- */
+.github-search-box {
+  display: flex;
+  gap: 12px;
+  max-width: 600px;
+  margin-bottom: 24px;
+}
+
+.status-msg {
+  font-size: 15px;
+  font-weight: 500;
+  color: #2563eb;
+  margin-bottom: 16px;
+}
+
+.gh-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 28px;
+  max-width: 700px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.gh-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.gh-header img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid #2563eb;
+}
+
+.gh-info h2 {
+  font-size: 22px;
+  color: #0f172a;
+}
+
+.gh-info a {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.gh-info a:hover {
+  text-decoration: underline;
+}
+
+.gh-info p {
+  color: #64748b;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.gh-stats {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.stat-pill {
+  background-color: #f1f5f9;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.stat-pill span {
+  color: #2563eb;
+}
+
+.gh-repo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gh-repo-list li {
+  background-color: #f8fafc;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.gh-repo-list li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0f172a;
+  display: block;
+}
+
+.gh-repo-list li a:hover {
+  color: #2563eb;
+}

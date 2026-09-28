@@ -90,3 +90,70 @@ if (reportTableBody) {
   if (completedCountEl) completedCountEl.textContent = `${completedCount} / ${totalTopics}`;
   if (progressPercentEl) progressPercentEl.textContent = `%${percent}`;
 }
+
+// --- 3. GITHUB API & ASYNC/AWAIT ÇALIŞMASI ---
+const ghSearchBtn = document.getElementById('gh-search-btn');
+const ghUsernameInput = document.getElementById('gh-username');
+const ghStatus = document.getElementById('gh-status');
+const ghCard = document.getElementById('gh-profile-card');
+
+if (ghSearchBtn && ghUsernameInput) {
+  ghSearchBtn.addEventListener('click', async function () {
+    const username = ghUsernameInput.value.trim();
+
+    if (!username) {
+      alert('Lütfen bir kullanıcı adı girin!');
+      return;
+    }
+
+    // Kullanıcıya bildirim ver
+    ghStatus.textContent = 'GitHub verileri getiriliyor...';
+    ghCard.style.display = 'none';
+
+    // setTimeout örneği: Gerçek bir asenkron bekleme hissi verelim (500ms)
+    setTimeout(async () => {
+      try {
+        // ASYNC/AWAIT & FETCH: GitHub API'sine istek atıyoruz
+        const userResponse = await fetch(`https://api.github.com/users/${username}`);
+        
+        if (!userResponse.ok) {
+          throw new Error('Kullanıcı bulunamadı!');
+        }
+
+        const userData = await userResponse.json();
+
+        // Repoları çekelim (En son güncellenen ilk 3 repo)
+        const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=3`);
+        const reposData = await reposResponse.json();
+
+        // DOM'a verileri basıyoruz
+        document.getElementById('gh-avatar').src = userData.avatar_url;
+        document.getElementById('gh-name').textContent = userData.name || userData.login;
+        
+        const linkEl = document.getElementById('gh-link');
+        linkEl.href = userData.html_url;
+        linkEl.textContent = `@${userData.login}`;
+
+        document.getElementById('gh-bio').textContent = userData.bio || 'Henüz bir biyografi eklenmemiş.';
+        document.getElementById('gh-repos-count').textContent = userData.public_repos;
+        document.getElementById('gh-followers').textContent = userData.followers;
+
+        // Repoları listele
+        const repoList = document.getElementById('gh-repo-list');
+        repoList.innerHTML = '';
+        reposData.forEach(repo => {
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="${repo.html_url}" target="_blank">📦 ${repo.name}</a>`;
+          repoList.appendChild(li);
+        });
+
+        // Yükleme bitti, kartı göster
+        ghStatus.textContent = '';
+        ghCard.style.display = 'block';
+
+      } catch (error) {
+        ghStatus.textContent = `Hata: ${error.message}`;
+      }
+    }, 500);
+  });
+}
